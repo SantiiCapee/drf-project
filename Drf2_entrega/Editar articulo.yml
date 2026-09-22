@@ -1,0 +1,24 @@
+info:
+  name: Editar articulo
+  type: http
+  seq: 1
+
+http:
+  method: PUT
+  url: http://127.0.0.1:8000/api/articulos/3/
+  body:
+    type: json
+    data: |-
+      {
+        "nombre": "Remera Over edit",
+        "precio": 6000,
+        "stock": 15,
+        "categoria_id": 1
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,24 @@
+info:
+  name: Crear articulo
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://127.0.0.1:8000/api/articulos/
+  body:
+    type: json
+    data: |-
+      {
+        "nombre": "Remera Over ",
+        "precio": 5000,
+        "stock": 20,
+        "categoria_id": 1
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
