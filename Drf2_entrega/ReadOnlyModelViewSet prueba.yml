@@ -1,0 +1,18 @@
+info:
+  name: ReadOnlyModelViewSet prueba
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://127.0.0.1:8000/api/categorias/
+  body:
+    type: json
+    data: '{"nombre": "Zapatos", "descripcion": "Calzado"}'
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

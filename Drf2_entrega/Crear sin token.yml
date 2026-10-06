@@ -1,0 +1,31 @@
+info:
+  name: Crear sin token
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://127.0.0.1:8000/api/articulos/
+  headers:
+    - name: Name
+      value: Authorization
+    - name: Value
+      value: Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzkxMzI2NTYxLCJpYXQiOjE3OTEzMjYyNjEsImp0aSI6ImVhMDE3ZTFlNmIxYjQzZGVhZTQ4OTIwN2JjMzJjY2UzIiwidXNlcl9pZCI6IjEifQ.IZPH-NzixZAI-aVY3raWfrj8EY_4Ccymu5Ug3fJfLBw
+  body:
+    type: json
+    data: |-
+      {
+        "nombre": "Pantalón Cargo",
+        "precio": 8500,
+        "stock": 10,
+        "categoria_id": 1
+      }
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzkxMzI2NTYxLCJpYXQiOjE3OTEzMjYyNjEsImp0aSI6ImVhMDE3ZTFlNmIxYjQzZGVhZTQ4OTIwN2JjMzJjY2UzIiwidXNlcl9pZCI6IjEifQ.IZPH-NzixZAI-aVY3raWfrj8EY_4Ccymu5Ug3fJfLBw
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
